@@ -1,0 +1,5 @@
+<ul class="well"> <%= @todo.each do |f| %>
+<li> <%= puts f %></li>
+<% end %>
+</ul>
+<a href="<%=link_to 'todos_new_path' %>">Crear To Do</a>
