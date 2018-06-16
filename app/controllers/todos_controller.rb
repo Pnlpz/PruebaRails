@@ -42,8 +42,9 @@ class TodosController < ApplicationController
   end
 
   def todos
-@todos = Todos.all
+    @todos = Todos.all
   end
+
   private
   def todo_params
     params.require(:todo).permit(:description, :completed)
