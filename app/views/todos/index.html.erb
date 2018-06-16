@@ -1,10 +1,13 @@
+
+<%=link_to 'Crear "To Do"', todos_new_path %>
+
 <ul class="well"> <%= @todo.each do |f| %>
-<li> <%= puts f %><%= link_to 'edit', edit_path%></li>
-<% end %>
+  <li> <%= puts f %><%= link_to 'Edit', edit_path%></li>
+  <% end %>
 </ul>
-<%=link_to 'Crear To Do', todos_new_path %>
 
 <%= @todo.each do |t| %>
-<h1><%= link_to p.description, todos%> </h1>
-<p><%= p.completed %></p>
+<h1><%= link_to t.description, todos%> </h1>
+<p><%= t.completed %></p>
+<p><%= link_to "delete", todo, method: :delete %></p>
 <% end %>
